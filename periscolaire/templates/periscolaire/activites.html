@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activités</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background: #f5f5f5; }
+        h1 { color: #E8460A; }
+        table { background: white; border-collapse: collapse; width: 100%; }
+        th { background: #E8460A; color: white; padding: 10px; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        nav a { margin-right: 20px; color: #E8460A; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/enfants/">👶 Enfants</a>
+        <a href="/activites/">🎯 Activités</a>
+        <a href="/inscriptions/">📋 Inscriptions</a>
+        <a href="/admin/">⚙️ Admin</a>
+    </nav>
+    <h1>🎯 Liste des Activités</h1>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Début</th>
+            <th>Fin</th>
+        </tr>
+        {% for activite in activites %}
+        <tr>
+            <td>{{ activite.nom }}</td>
+            <td>{{ activite.description }}</td>
+            <td>{{ activite.heure_debut }}</td>
+            <td>{{ activite.heure_fin }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
