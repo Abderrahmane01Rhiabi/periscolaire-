@@ -19,7 +19,8 @@ class Activite(models.Model):
     description = models.TextField(blank=True)
     heure_debut = models.TimeField()
     heure_fin = models.TimeField()
-
+    telephone_contact = models.CharField(max_length=20, blank=True, default='')
+    
     def __str__(self):
         return self.nom
     
